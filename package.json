@@ -1,0 +1,23 @@
+{
+  "name": "test-game",
+  "version": "1.0.0",
+  "description": "A desktop version of the popular Wordscapes word puzzle game, specifically designed for learning Estonian vocabulary. Built with HTML, CSS, and JavaScript.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dilbar-h/test-game.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dilbar-h/test-game/issues"
+  },
+  "homepage": "https://github.com/dilbar-h/test-game#readme",
+  "devDependencies": {
+    "playwright": "^1.54.1"
+  }
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estonian Wordscapes - Learn Estonian Words</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <div class="level-info">
+                <h1>Estonian Wordscapes</h1>
+                <!-- Round Bar (above progress bar, under title) -->
+                <div class="round-bar-wrapper">
+                  <div id="roundBar"></div>
+                </div>
+
+            </div>
+            <div class="level-progress-wrapper">
+                <!-- Level Progress Bar (left-aligned, under title) -->
+                <div id="level-progress-container" aria-label="Level Progress" role="progressbar" aria-valuenow="1" aria-valuemin="1" aria-valuemax="20">
+                    <span id="level-progress-text">Level 1 of 20</span>
+                    <div class="level-progress-bar-bg">
+                        <div id="level-progress-bar"></div>
+                    </div>
+                </div>
+                <div class="score-info">
+                    <div class="score">
+                        <span class="score-label">Score</span>
+                        <span class="score-number" id="scoreNumber">0</span>
+                    </div>
+                    <div class="progress">
+                        <div class="progress-bar">
+                            <div class="progress-fill" id="progressFill"></div>
+                        </div>
+                        <span class="progress-text" id="progressText">0/0</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <main class="game-main">
+            <div class="crossword-container">
+                <div class="crossword-grid" id="crosswordGrid"></div>
+            </div>
+
+            <div class="letter-wheel-container">
+                <div class="letter-wheel" id="letterWheel">
+                    <!-- Letters will be dynamically added here -->
+                </div>
+                <div class="word-display">
+                    <input type="text" class="answer-input" id="answerInput" placeholder="Your answer" maxlength="20">
+                </div>
+                <div class="wheel-controls">
+                    <button class="control-btn shuffle-btn" id="shuffleBtn">
+                        <span class="btn-icon"><img src="shuffle-icon.png" alt="Shuffle" style="width: 1.2em; height: 1.2em; vertical-align: middle;"></span>
+                        <span class="btn-text">Shuffle</span>
+                    </button>
+                    <button class="control-btn hint-btn" id="hintBtn">
+                        <span class="btn-icon"><img src="loupe.png" alt="Hint" style="width: 1.2em; height: 1.2em; vertical-align: middle;"></span>
+                        <span class="btn-text">Hint</span>
+                    </button>
+                </div>
+            </div>
+        </main>
+
+        <div class="game-overlay" id="gameOverlay">
+            <div class="overlay-content">
+                <h2 id="overlayTitle">Level Complete!</h2>
+                <p id="overlayMessage">Great job! You found all the words.</p>
+                <div class="overlay-stats">
+                    <div class="stat">
+                        <span class="stat-label">Words Found:</span>
+                        <span class="stat-value" id="wordsFoundStat">0</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-label">Score:</span>
+                        <span class="stat-value" id="finalScoreStat">0</span>
+                    </div>
+                </div>
+                <button class="next-level-btn" id="nextLevelBtn">Next Level</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js?v=2.2"></script>
+</body>
+</html> 
